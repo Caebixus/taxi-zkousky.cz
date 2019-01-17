@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% load quiz_tags %}
+
+{% block title %} {{ quiz.title }} {% endblock %}
+{% block description %} {{ quiz.title }} - {{ quiz.description }} {% endblock %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+  <p>{% trans "Tuto zkoušku jste již vykonal. Tento test se vykonává pouze jednou!" %}.</p>
+{% else %}
+  <p>{% trans "Tato zkouška je přístupná pouze registrovaných uživatelům" %}.</p>
+{% endif %}
+
+{% endblock %}

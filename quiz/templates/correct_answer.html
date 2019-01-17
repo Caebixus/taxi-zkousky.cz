@@ -1,0 +1,35 @@
+{% load i18n %}
+{% if previous.answers %}
+<div class="container">
+  {% if user_was_incorrect %}
+  <div class="alert alert-error" style="text-align: center">
+    <p style="font-size:160%; color: rgb(178,0,0)"><strong>{% trans "Na tuto otázku jste odpověděli špatně" %}</strong></p>
+  </div>
+  {% endif %}
+  <table class="table table-striped table-bordered">
+    <tbody>
+      {% for answer in previous.answers %}
+      {% if answer.correct %}
+      <tr class="success">
+        <td style="background-color: MediumSeaGreen">{{ answer.content }}</td>
+        <td style="background-color: MediumSeaGreen"><strong>{% trans "Toto je správná odpověď" %}</strong></td>
+        {% else %}
+      </tr>
+        <tr>
+          <div class="container">
+            <td>{{ answer.content }}</td>
+            <td>
+              {% if previous.question_type.MCQuestion %}
+              {% if answer.id|add:"0" == previous.previous_answer|add:"0" %}
+              {% trans "This was your answer." %}
+              {% endif %}
+              {% endif %}
+            </td>
+            {% endif %}
+          </div>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>

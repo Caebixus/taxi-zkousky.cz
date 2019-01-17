@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main role="main">
+<!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="container-fluid" style="background-image: url('static/taximage.jpg'); position: relative; background-repeat: no-repeat; width:auto;; height:40rem; background-size: cover">
+    <div class="container text-center">
+      <h1 class="display-3" style="color:white; padding-top: 7rem">Taxi zkoušky jednoduše</h1>
+      <p style="color: white">Získání potřebné taxi zkoušky již není problém!</p>
+      <p><a class="btn btn-primary btn-lg" href="#info" role="button" style="margin: 6rem">Více informací</a></p>
+    </div>
+  </div>
+
+  <div class="container" style="max-width: 100%">
+    <div class="row align-items-center" style="height: 8rem; background-color: #fdd535">
+      <div class="col-sm text-center text-black">
+        Místopis + právní předpisy
+      </div>
+      <div class="col-sm text-center text-black">
+        Oficiální otázky od magistrátu
+      </div>
+      <div class="col-sm text-center text-black">
+        Zaškolení s taxametrem
+      </div>
+      <div class="col-sm text-center text-black">
+        99% úspěšnost složení zkoušky
+      </div>
+    </div>
+  </div>
+
+
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="info">
+    <h1 class="display-4">Naše kurzy</h1>
+    <p class="lead">Naše kurzy se liší dle poptávky nových řidičů. Někteří se potřebují jen připravit na písemné zkoušky a jiní potřebují zaškolit i v taxametru. Obě verze jsou popsány níže:</p>
+  </div>
+
+  <div class="container" style="padding-bottom: 4rem">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header text-white bg-info">
+          <h4 class="my-0 font-weight-normal">Základní verze</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">Zdarma <small class="text-muted"></small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Přístup k materiálům</li>
+            <li>Přístup ke zkouškám na nečisto</li>
+            <li>Přístup k otestování znalostí</li>
+            <li>Detail kurzu</li>
+          </ul>
+          <a class="btn btn-block btn-primary" href="{% url 'signup' %}">Registrovat</a>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header text-white bg-info">
+          <h4 class="my-0 font-weight-normal">Rozšířená verze</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">499,- <small class="text-muted">/ na měsíc</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Vše v základní verzi</li>
+            <li>Osobní zaškolení v taxametru: Semitron P 6S v rámci celodenního kurzu</li>
+            <li>Detail kurzu</li>
+          </ul>
+          <a class="btn btn-block btn-secondary" href="{% url 'signup' %}">Objednat nyní</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock  %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load quiz_tags %}
+{% block title %}{% trans "All Quizzes" %}{% endblock %}
+
+{% block content %}
+<div class="container py-4" style="text-align: center">
+  <h2>{% trans "Seznam Testů" %}</h2>
+  {% if quiz_list %}
+  <table class="table table-bordered table-striped">
+
+    <thead>
+      <tr>
+        <th>{% trans "Test" %}</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      {% for quiz in quiz_list %}
+
+      <tr>
+        <td>{{ quiz.title }}</td>
+        <td>
+          <a href="{% url 'quiz_start_page' slug=quiz.url %}">
+            {% trans "Detail testu" %}
+          </a>
+        </tr>
+
+        {% endfor %}
+      </tbody>
+
+    </table>
+
+    {% else %}
+    <p>{% trans "There are no available quizzes" %}.</p>
+    {% endif %}
+</div>
+{% endblock %}

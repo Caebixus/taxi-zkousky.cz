@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% load quiz_tags %}
+
+{% block title %} {{ quiz.title}} {% endblock %}
+{% block description %} {% trans "Exam Results for" %} {{ quiz.title }} {% endblock %}
+
+{% block content %}
+
+  {% if previous.answers %}
+<div class="container" style="text-align: center">
+  <p class="muted" style="text-align: center"><small>{% trans "Předchozí otázka" %}:</small></p>
+  <p>{{ previous.previous_question }}</p>
+  <p>Vaše odpověď je:
+	<strong>
+	  {{ previous.previous_outcome|yesno:"Správně,Špatně" }}
+	</strong>
+  </p>
+  {% include 'correct_answer.html' %}
+  <div class="well " style="background-color: #fcf8e3;">
+    <p>{{ previous.previous_question.explanation }}</p>
+  </div>
+  <hr>
+</div>
+  {% endif %}
+
+  {% if max_score %}
+
+<div class="container">
+  <br>
+	<h2 style="text-align: center">{% trans "Výsledky testu" %}</h2>
+	<p>
+	  <small class="muted" style="text-align: center">{% trans "Název testu: " %}: </small>
+	  <strong>{{ quiz.title }}</strong></p>
+  <br>
+  <br>
+	<p class="lead" style="text-align: center">
+    Celkem správných odpovědí: <strong style="color: rgb(178,0,0)">{{ score }} z {{ max_score }}</strong>
+    Celkem procentuální scoré: <strong style="color: rgb(178,0,0)">{{ percent }}</strong>
+	</p>
+
+	{% if quiz.pass_mark %}
+	<hr>
+
+	{% endif %}
+  <br>
+	<h2 style="text-align: center">{% trans "Projděte si špatné odpovědi níže"%}.</h2>
+
+	{% if user.is_authenticated %}
+
+	  <p style="text-align: center">{% trans "Výsledky testů jsou ukládány a můžete se podívat v jakých kategoriích chybujete nejčastěji" %}.</p>
+
+	{% endif %}
+  <br>
+</div>
+
+
+  {% endif %}
+
+
+  <hr>
+
+  {% if possible %}
+<div class="container">
+  <p class="lead">
+	{% trans "Vaše scóre je" %} {{ session }} {% trans "z maximálního možného" %} {{ possible }}
+  </p>
+
+  <hr>
+
+  {% endif %}
+
+  {% if questions %}
+
+    {% for question in questions %}
+    <br>
+    <div class="container">
+      <p class="lead" style="text-align: center">
+  		<strong>"{{ question.content }}"</strong>
+  	  </p>
+    </div>
+    <br>
+
+	  {% correct_answer_for_all question %}
+      {% if question.user_answer %}
+      <div class="container" style="text-align: center">
+        <br>
+        <p style="font-size:160%;">{% trans "Vaše odpověď" %}: {{ question|answer_choice_to_string:question.user_answer }}</p>
+      </div>
+      {% endif %}
+
+	  <div class="well " style="background-color: #fcf8e3;">
+		<p>{{ question.explanation|safe }}</p>
+	  </div>
+    <br>
+
+	  <hr>
+
+  {% endfor %}
+
+  {% endif %}
+
+</div>
+{% endblock %}

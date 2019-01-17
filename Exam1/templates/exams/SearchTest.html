@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
+
+<div class="container py-5">
+  <div class="title" style="text-align: center">
+    <h1> Vyberte druh otázek nebo testu</h1>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="title2" style="text-align: center">
+    <h4>Testy z legislativy</h4>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="button">
+      <a class="btn btn-info" href="{% url 'Exam9' %}" style="width:17rem">Procvičit celý test z legislativy</a>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:17rem">
+        Procvičit jednotlivé kategorie
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{% url 'Exam1' %}">Obecné</a>
+        <a class="dropdown-item" href="{% url 'Exam2' %}">Živnostenský zákon</a>
+        <a class="dropdown-item" href="{% url 'Exam3' %}">Silniční doprava</a>
+        <a class="dropdown-item" href="{% url 'Exam4' %}">Provozní řád stanovišť taxi</a>
+        <a class="dropdown-item" href="{% url 'Exam5' %}">Pravidla silničního provozu</a>
+        <a class="dropdown-item" href="{% url 'Exam6' %}">Pojištění odpovědnosti</a>
+        <a class="dropdown-item" href="{% url 'Exam7' %}">Kontrolní řád</a>
+        <a class="dropdown-item" href="{% url 'Exam8' %}">Ceny</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="title2" style="text-align: center">
+    <h4>Testy z místopisu</h4>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="button">
+      <a class="btn btn-info" href="{% url 'Exam15' %}" style="width:17rem">Procvičit celý test z místopisu</a>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:17rem">
+        Procvičit jednotlivé kategorie
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{% url 'Exam10' %}">Určení adres objektů</a>
+        <a class="dropdown-item" href="{% url 'Exam11' %}">Orientační vzdálenost</a>
+        <a class="dropdown-item" href="{% url 'Exam12' %}">Trasy</a>
+        <a class="dropdown-item" href="{% url 'Exam13' %}">Organizace dopravy</a>
+        <a class="dropdown-item" href="{% url 'Exam14' %}">Určení polohy ulice</a>
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+  {% endblock %}

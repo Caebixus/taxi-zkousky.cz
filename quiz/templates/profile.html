@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if error %}
+{{error}}
+{% endif %}
+
+<title>Profile</title>
+
+<div class="container py-3">
+  <h1 style="text-align: center">Můj profil</h1>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p style="text-align: center"><strong>Email: </strong></p>
+      <p style="text-align: center">{{ user.username }}</p>
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm" style="text-align: center">
+      <p><strong>Objednat osobní zaškolení v taxametru:</strong></p>
+      <p align="center">
+        <a class="btn btn-info text-center" href="mailto:info@taxizkousky.cz?subject=Objednávka_školení_taxametru&body=Dobrý den, mám zájem o objednání školení v taxametru">Objednejte zde</a>
+      </p>
+    </div>
+  </div>
+  <hr>
+  <br>
+  <p style="text-align: center"><strong>Oficiální termíny zkoušek z pražského magistrátu:</strong></p>
+  <p align="center">
+    <a class="btn btn-info text-center" href="https://www.praha.eu/jnp/cz/doprava/taxi/zkousky_z_mistopisu/index.html?secure=1">Termíny</a>
+  </p>
+  <br>
+  <hr>
+  <br>
+  <p style="text-align: center"><strong>Změna hesla:</strong></p>
+  <p align="center">
+    <a class="btn btn-info text-center" href="{% url 'change_password' %}">Změna hesla</a>
+  </p>
+</div>
+<br>
+<br>
+
+{% endblock %}

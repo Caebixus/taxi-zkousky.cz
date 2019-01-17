@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% load quiz_tags %}
+
+{% block title %} {% trans "Progress Page" %} {% endblock %}
+{% block description %} {% trans "User Progress Page" %} {% endblock %}
+
+{% block content %}
+
+  {% if cat_scores %}
+
+<div class="container py-4" style="text-align: center;">
+  <h1>{% trans "Vylepšujte scoré z kategoriích" %}</h1>
+  <br />
+  <table class="table table-bordered table-striped">
+
+	<thead>
+	  <tr>
+		<th>{% trans "Druhy otázek" %}</th>
+		<th>{% trans "Správně" %}</th>
+		<th>{% trans "Špatně" %}</th>
+		<th>Procentuálně</th>
+	  </tr>
+	</thead>
+
+	<tbody>
+
+
+	  {% for cat, value in cat_scores.items %}
+	  <tr>
+		<td>{{ cat }}</td>
+		<td>{{ value.0 }}</td>
+		<td>{{ value.1 }}</td>
+		<td>{{ value.2 }}</td>
+	  </tr>
+
+	  {% endfor %}
+
+	</tbody>
+
+  </table>
+
+
+  {% endif %}
+
+  {% if exams %}
+
+  <hr>
+
+  <h1>{% trans "Výsledky Hlavních testů" %}</h1>
+  <p class="lead">
+	{% trans "Toto jsou výsledky hlavních testů, které mají simulovat opravdové zkoušky. Tedy odpovědi budete znát až na konci včetně procentuálního vyhodnocení" %}
+  </p>
+
+  <table class="table table-bordered table-striped">
+
+	<thead>
+	  <tr>
+    <th>{% trans "Datum začátku testu" %}</th>
+		<th>{% trans "Název testu" %}</th>
+		<th>{% trans "Správné odpovědi" %}</th>
+		<th>{% trans "Maximum správných odpovědí" %}</th>
+		<th>Procentuální výsledek</th>
+	  </tr>
+	</thead>
+
+	<tbody>
+
+	  {% for exam in exams %}
+
+	  <tr>
+    <td>{{ exam.start }}</td>
+		<td>{{ exam.quiz.title }}</td>
+		<td>{{ exam.current_score }}</td>
+		<td>{{ exam.get_max_score }}</td>
+		<td>{{ exam.get_percent_correct }}</td>
+	  </tr>
+
+	  {% endfor %}
+
+	</tbody>
+
+  </table>
+
+  {% endif %}
+<br>
+<br>
+</div>
+
+
+{% endblock %}
