@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'mcq',
     'quiz',
+    'contacts.apps.ContactsConfig',
     'Exam1.apps.Exam1Config',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -110,9 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'cz'
 
-TIME_ZONE = 'Asia/Kolkata'
+TIME_ZONE = 'Europe/Prague'
 
 USE_I18N = True
 

@@ -1,5 +1,4 @@
 import random
-
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render, redirect
@@ -15,7 +14,7 @@ from django.contrib.auth import authenticate, login, logout, update_session_auth
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib import messages
 from Exam1 import urls
-
+from contacts.models import Feedback
 
 class QuizMarkerMixin(object):
     @method_decorator(login_required)
@@ -247,16 +246,19 @@ def index(request):
 def signup(request):
     if request.method == 'POST':
         # Uživatel má informace a chce založit účet
-        if request.POST['password1'] == request.POST['password2']:
-            try:
-                user = User.objects.get(username=request.POST['usernameEmail'])
-                return render(request, 'signup', {'error':'Uživatel s tímto emailem již existuje - '})
-            except User.DoesNotExist:
-                user = User.objects.create_user(request.POST['usernameEmail'], password=request.POST['password1'])
-                auth.login(request,user)
-                return redirect('SearchTest')
+        if 'checked_agreeGdprBox' in request.POST:
+            if request.POST['password1'] == request.POST['password2']:
+                try:
+                    user = User.objects.get(username=request.POST['usernameEmail'])
+                    return render(request, 'signup.html', {'error':'Uživatel s tímto emailem již existuje - Přihlašte se'})
+                except User.DoesNotExist:
+                    user = User.objects.create_user(request.POST['usernameEmail'], password=request.POST['password1'])
+                    auth.login(request,user)
+                    return redirect('SearchTest')
+            else:
+                return render(request, 'signup.html', {'error':'Hesla nesouhlasí'})
         else:
-            return render(request, 'signup', {'error':'Hesla nesouhlasí'})
+            return render(request, 'signup.html', {'error':'Musíte odsouhlasit podmínky!'})
     else:
             # Uživatel má informace a chce založit účet
         return render(request, 'signup.html')
@@ -307,6 +309,9 @@ def change_password(request):
 
 def jakToFunguje(request):
     return render(request, 'jakToFunguje.html')
+
+def cookies(request):
+    return render(request, 'cookies.html')
 
 def profile(request):
     args = {'user':request.user}

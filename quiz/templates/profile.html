@@ -1,8 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if error %}
-{{error}}
-{% endif %}
 
 <title>Profile</title>
 
@@ -37,7 +34,14 @@
   <p align="center">
     <a class="btn btn-info text-center" href="{% url 'change_password' %}">Změna hesla</a>
   </p>
+  <br>
+  <hr>
+  <p style="text-align: center"><strong>Ohodnoďte nás:</strong></p>
+  <p align="center">
+    <a class="btn btn-info text-center" href="{% url 'hodnoceni' %}">Hodnocení</a>
+  </p>
 </div>
+<br>
 <br>
 <br>
 

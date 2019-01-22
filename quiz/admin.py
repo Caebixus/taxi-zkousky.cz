@@ -4,22 +4,16 @@ from django.contrib.auth.models import User
 from django import forms
 from django.contrib.admin.widgets import FilteredSelectMultiple
 # Register your models here.
-from .models import Quiz, Category, Question, Progress, Student
+from .models import Quiz, Category, Question, Progress
 from mcq.models import MCQQuestion, Answer
 from django.utils.translation import ugettext_lazy as _
 from .models import CSVUpload
 
 # Define an inline admin descriptor for Employee model
 # which acts a bit like a singleton
-class EmployeeInline(admin.StackedInline):
-    model = Student
-    can_delete = False
-    verbose_name_plural = 'Students'
 
-# Define a new User admin
 class UserAdmin(BaseUserAdmin):
-    inlines = (EmployeeInline,)
-    list_display = ('username', 'first_name', 'last_name', 'is_staff',)
+    list_display= ('username', 'is_staff', 'date_joined', 'last_login')
 
 class CSVUploadsAdmin(admin.ModelAdmin):
     model = CSVUpload

@@ -14,14 +14,8 @@ from .signals import csv_uploaded
 from .validators import csv_file_validator
 from django.contrib.auth.models import User
 from django.contrib import messages
+from datetime import datetime
 
-
-class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    userCreated = models.DateTimeField(auto_now_add=True)
-
-    def pub_date_pretty(self):
-        return self.pub_date.strftime('%b %e %Y')
 
 class CategoryManager(models.Manager):
 

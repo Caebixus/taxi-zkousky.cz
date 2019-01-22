@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<title>Hodnoceni</title>
+<br>
+<h1 style="text-align: center">Hodnoceni</h1>
+<div class="container py-3">
+  {% if error %}
+    <div class="error" style="color: red;text-align: center">
+      {{error}}
+    </div>
+  {% endif %}
+  <div class="modal-body" style="text-align: center;">
+    <form method="POST" action="{% url 'hodnoceni' %}" style="margin-top: 5rem">
+      <br>
+      {% csrf_token %}
+      <div class="form-group" style="text-align: center">
+        <label for="message"><strong>Vaše postřehy, komentáře nebo hodnocení:</strong></label>
+        <input type="textbox" class="form-control" name="message"></input>
+      </div>
+      <p align="center">
+        <button type="submit" class="btn btn-primary">Poslat názor</button>
+      </p>
+    </form>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+{% endblock %}
