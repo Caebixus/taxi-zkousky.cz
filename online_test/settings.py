@@ -25,7 +25,7 @@ SECRET_KEY = 'q^n4^0*8v2f9%qs$+hg7l0g!-461fja26bzq=cwp)y3u&k6i8&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["taxizkousky.cz", "www.taxizkousky.cz", "localhost", "127.0.0.1", "31.31.78.226"]
 
 
 # Application definition
@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'quizapp',
-        'USER': 'postgres',
-        'PASSWORD': 'necumkurva',
+        'USER': 'quizapp',
+        'PASSWORD': 'xSgJarApngXEM9XP',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -129,5 +129,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'online_test/static/')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
