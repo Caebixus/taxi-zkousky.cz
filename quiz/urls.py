@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from .views import QuizListView, CategoriesListView,\
     ViewQuizListByCategory, QuizUserProgressView, QuizMarkingList,\
-    QuizMarkingDetail, QuizDetailView, QuizTake, index, login, signup, logout_user, jakToFunguje, profile, change_password, cookies
+    QuizMarkingDetail, QuizDetailView, QuizTake, index, login, signup, logout_user, jakToFunguje, profile, change_password, cookies, sitemap
 from django.urls import path, include
 
 
@@ -9,6 +9,7 @@ urlpatterns = [         url(regex=r'^$', view=index, name='index'),
                         url(regex=r'^login/$', view=login, name='login'),
                         url(regex=r'^profile/$', view=profile, name='profile'),
                         url(regex=r'^jakToFunguje/$', view=jakToFunguje, name='jakToFunguje'),
+                        url(regex=r'^sitemap/$', view=sitemap, name='sitemap'),
                         url(regex=r'^signup/$', view=signup, name='signup'),
                         url(regex=r'^cookies/$', view=cookies, name='cookies'),
                         url(regex=r'^password/$', view=change_password, name='change_password'),

@@ -4,9 +4,18 @@
 <head>
   {% load staticfiles %}
   {% load static %}
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5QPS7TV');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Připravili jsme pro Vás cvičné i simulace reálných taxi zkoušek a taxi testů, které Vám ukážou kde a kdy chybujete. S námi máte 99% šanci uspět!">
+  <meta name="description" content="Připravili jsme pro Vás detailní přípravnou simulaci taxi zkoušky, které Vám ukážou, kde a kdy chybujete. S námi máte 99% šanci uspět!">
   <meta name="keywords" content="Taxi zkoušky, taxi zkousky, zkousky taxi praha, zkoušky taxi praha, otázky na zkoušky praha, zkoušky na taxi, testy pro řidiče taxi, testy na taxi">
   <meta name="author" content="Taxizkousky.cz">
 
@@ -15,6 +24,10 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QPS7TV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fdd535">
     <a class="navbar-brand" href="{% url 'index' %}">
       <img src="{% static 'logo-taxizkousky.png' %}" alt="Logo-TaxiZkousky.cz" class="d-inline-block align-top" style="height: 4rem; width: 16rem" />
@@ -57,63 +70,18 @@
 
   {% block content %}
   {% endblock %}
-<div class="footer" id="footer">
-  <style>
-  /**
-   * Demo Styles
-   */
-
-  html {
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-
-  body {
-    position: relative;
-    margin: 0;
-    padding-bottom: 6rem;
-    min-height: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-  }
-
-  .demo {
-    margin: 0 auto;
-    padding-top: 64px;
-    max-width: 640px;
-    width: 94%;
-  }
-
-  .demo h1 {
-    margin-top: 0;
-  }
-
-  /**
-   * Footer Styles
-   */
-
-  .footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 0rem;
-    background-color: #ffffff;
-    text-align: center;
-  }
-
-  </style>
-  <div class="container">
-    <p style="text-align:center; margin-top:3rem">&copy; Taxizkousky.cz 2017-2019</p>
-    <p style="text-align:center; font-size:80%">Pro více informací nebo spolupráci, piště na:</p><a href="mailto:info@taxizkousky.cz">info@taxizkousky.cz</a>
-  </div>
   <br>
-</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="footer" id="footer">
+    <div class="container" style="text-align: center">
+      <p style="text-align:center; margin-top:3rem">&copy; Taxizkousky.cz 2017-2019</p>
+      <p style="text-align:center; font-size:80%">Pro více informací nebo spolupráci, piště na:</p><a href="mailto:info@taxizkousky.cz">info@taxizkousky.cz</a>
+    </div>
+    <br>
+  </div>
 
   <!-- Bootstrap core JavaScript
   ================================================== -->

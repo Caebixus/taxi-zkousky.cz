@@ -12,8 +12,8 @@ def hodnoceni(request):
             feedback.message = request.POST['message']
             feedback.feedbackUser = request.user
             feedback.save()
-            return render(request, 'hodnoceni/hodnoceni.html', {'error':'Správně!'})
+            return render(request, 'hodnoceni/hodnoceni.html', {'error':'Hodnoceni odesláno!'})
         else:
-            return render(request, 'hodnoceni/hodnoceni.html', {'error':'Vyplňte políčka!'})
+            return render(request, 'hodnoceni/hodnoceni.html', {'error':'Prosím o napsání Vašeho komentáře do políčka!'})
     else:
         return render(request, 'hodnoceni/hodnoceni.html', {})

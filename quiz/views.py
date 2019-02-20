@@ -310,6 +310,9 @@ def change_password(request):
 def jakToFunguje(request):
     return render(request, 'jakToFunguje.html')
 
+def sitemap(request):
+    return render(request, 'sitemap.xml')
+
 def cookies(request):
     return render(request, 'cookies.html')
 
