@@ -1,14 +1,16 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
+<link rel="canonical" href="https://www.taxizkousky.cz/" />
 <title>2019 | Připravte se na taxi zkoušky s námi!</title>
 <main role="main">
-<!-- Main jumbotron for a primary marketing message or call to action -->
+  <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="container-fluid" style="background-image: url('static/taximage.jpg'); position: relative; background-repeat: no-repeat; width:auto;; height:40rem; background-size: cover">
     <div class="container text-center">
-      <h1 class="display-3" style="color:white; padding-top: 7rem">Taxi zkoušky jednoduše</h1>
+      <h1 class="display-4" style="color:white; padding-top: 8rem">Taxi zkoušky jednoduše a zdarma</h1>
       <h4 class="display-9" style="color: white">Náš program Vám sám poradí, kde chybujete!</h4>
-      <p><a class="btn btn-primary btn-lg" href="#info" role="button" style="margin: 6rem">Více informací</a></p>
+      <p><a class="btn btn-primary btn-lg" href="#info" role="button" style="margin: 3rem">Více informací</a></p>
+      <br>
     </div>
   </div>
 
@@ -29,9 +31,77 @@
     </div>
   </div>
 
-
-  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="info">
-    <h1 class="display-4">Naše kurzy</h1>
+  <div class="container" style="padding-top: 2rem" id="info">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Pro úspěšné složení taxi zkoušek je potřeba trénink a disciplína</h2>
+        <br>
+        <p class="lead">Stát se profesionálním řidičem taxi v Praze může na první pohled vypadat jako nepřekonatelný byrokratický proces. Je potřeba zařídit si:</p>
+        <p class="lead">a) Průkaz taxi ("žlutá kartička taxi")</p>
+        <p class="lead">b) Osvědčení o zkoušce z místopisu a legislativy</p>
+        <p class="lead">c) Zařídit si oprávnění provozovat taxi, tedy taxikářskou koncesi</p>
+        <p class="lead">Není to však tak těžké jak se na první pohled může zdát. Z našich zkušeností vyplívá, že zájemci nejvíce podceňují právě zkoušky z místopisu a legislativy.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{% static 'Test1.jpg' %}">
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Trénujte na taxi zkoušky a to zcela zdarma!</h2>
+        <br>
+        <p class="lead">Tento web je vytvořen i pro mobilní zařízení, takže si taxi zkoušky můžete procvičovat kdykoliv budete mít vhodnou chvíli. Bude vždy přístupný a zdarma.</p>
+        <p class="lead">Jediné co je za poplatek je ukázka a zaškolení taxametru, které probíhá s naším zkušeným kolegou.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{% static 'Test2.jpg' %}">
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <hr class="featurette-divider">
+  <div class="container" style="text-align: center">
+    <h2 class="display-4">Články a informace</h2>
+    <br>
+    <div class="card-group" style="width:400px">
+      <div class="card" style="width:400px; border-radius: 5%;">
+        <a href="{% url 'clanek1' %}">
+          <img src="{% static 'Taxi1.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5%;">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Jak udělat taxi zkoušky co nejrychleji?</h5>
+          <p class="card-text">Úspěšně složit taxi zkoušky je povinností každého uchazeče o taxi koncesi v Praze...</p>
+          <div class="container" style="text-align: center">
+            <a href="{% url 'clanek1' %}" class="btn btn-warning" style="width: 10rem">Přečíst</a>
+          </div>
+        </div>
+      </div>
+      <div hidden class="card" style="width:400px">
+        <img src="{% static 'Taxi1.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div hidden class="card" style="width:400px">
+        <img src="{% static 'Taxi1.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <hr class="featurette-divider">
+    <h2 class="display-4">Naše kurzy</h2>
     <p class="lead">Naše kurzy se liší dle poptávky nových řidičů. Někteří se potřebují jen připravit na písemné zkoušky a jiní potřebují zaškolit i v taxametru. Obě verze jsou popsány níže:</p>
   </div>
 
@@ -68,4 +138,4 @@
     </div>
   </main>
 
-{% endblock  %}
+  {% endblock  %}

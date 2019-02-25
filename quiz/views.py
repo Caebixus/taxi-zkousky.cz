@@ -316,6 +316,12 @@ def sitemap(request):
 def cookies(request):
     return render(request, 'cookies.html')
 
+def clanky(request):
+    return render(request, 'allblogs.html')
+
+def clanek1(request):
+    return render(request, 'Jak-udelat-taxi-zkousky-co-nejrychleji.html')
+
 def profile(request):
     args = {'user':request.user}
     return render(request, 'profile.html', args)

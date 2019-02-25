@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'quiz',
     'contacts.apps.ContactsConfig',
     'Exam1.apps.Exam1Config',
-    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<link rel="canonical" href="https://www.taxizkousky.cz/clanky/" />
+<title>2019 | Taxi zkoušky - Články</title>
+<h1 style="text-align: center; margin-top:2rem"> Články k tématu taxi zkoušek </h1>
+
+<div class="container" style="padding-top: 5rem">
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static" style="text-align: center;">
+          <a href="{% url 'clanek1' %}">
+            <img src="{% static 'Taxi1.jpg' %}" class="card-img-top" alt="...">
+          </a>
+          <br>
+          <h3 class="mb-0">Jak udělat taxi zkoušky co nejrychleji?</h3>
+          <br>
+          <p class="card-text mb-auto">Úspěšně složit taxi zkoušky je povinností každého uchazeče o taxi koncesi v Praze...</p>
+          <br>
+          <div class="container" style="text-align: center">
+            <a href="{% url 'clanek1' %}" class="btn btn-warning" style="width: 10rem">Přečíst</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
