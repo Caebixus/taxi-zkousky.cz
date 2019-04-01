@@ -246,19 +246,16 @@ def index(request):
 def signup(request):
     if request.method == 'POST':
         # Uživatel má informace a chce založit účet
-        if 'checked_agreeGdprBox' in request.POST:
-            if request.POST['password1'] == request.POST['password2']:
-                try:
-                    user = User.objects.get(username=request.POST['usernameEmail'])
-                    return render(request, 'signup.html', {'error':'Uživatel s tímto emailem již existuje - Přihlašte se'})
-                except User.DoesNotExist:
-                    user = User.objects.create_user(request.POST['usernameEmail'], password=request.POST['password1'])
-                    auth.login(request,user)
-                    return redirect('SearchTest')
-            else:
-                return render(request, 'signup.html', {'error':'Hesla nesouhlasí'})
+        if request.POST['password1'] == request.POST['password2']:
+            try:
+                user = User.objects.get(username=request.POST['usernameEmail'])
+                return render(request, 'signup.html', {'error':'Uživatel s tímto emailem již existuje - Přihlašte se'})
+            except User.DoesNotExist:
+                user = User.objects.create_user(request.POST['usernameEmail'], password=request.POST['password1'])
+                auth.login(request,user)
+                return redirect('SearchTest')
         else:
-            return render(request, 'signup.html', {'error':'Musíte odsouhlasit podmínky!'})
+            return render(request, 'signup.html', {'error':'Hesla nesouhlasí'})
     else:
             # Uživatel má informace a chce založit účet
         return render(request, 'signup.html')
@@ -321,6 +318,9 @@ def clanky(request):
 
 def clanek1(request):
     return render(request, 'Jak-udelat-taxi-zkousky-co-nejrychleji.html')
+
+def clanek2(request):
+    return render(request, '3-rady-pro-uspesne-slozeni-taxi-zkousek.html')
 
 def profile(request):
     args = {'user':request.user}
