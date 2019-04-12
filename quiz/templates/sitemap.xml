@@ -1,37 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>https://www.taxizkousky.cz/</loc>
-  <lastmod>2019-02-06T10:39:34+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.taxizkousky.cz/jakToFunguje/</loc>
-  <lastmod>2019-02-06T10:39:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.taxizkousky.cz/signup/</loc>
-  <lastmod>2019-02-06T10:39:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.taxizkousky.cz/login/</loc>
-  <lastmod>2019-02-06T10:39:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.taxizkousky.cz/cookies/</loc>
-  <lastmod>2019-02-06T10:39:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+  <url>
+    <loc>https://www.taxizkousky.cz/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.taxizkousky.cz/jakToFunguje/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.taxizkousky.cz/clanky/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.taxizkousky.cz/signup/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.taxizkousky.cz/login/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.taxizkousky.cz/clanky/Jak-udelat-taxi-zkousky-co-nejrychleji/
+    </loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.taxizkousky.cz/clanky/3-rady-pro-uspecne-slozeni-taxi-zkousek/
+    </loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.taxizkousky.cz/cookies/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.taxizkousky.cz/profile/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.taxizkousky.cz/password/</loc>
+    <lastmod>2019-04-12T08:26:37+00:00</lastmod>
+    <priority>0.51</priority>
+  </url>
 </urlset>
