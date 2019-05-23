@@ -72,7 +72,7 @@
       <div class="col-md-auto">
         <div class="card" style="width:20rem; border-radius: 5%;">
           <a href="{% url 'clanek1' %}">
-            <img src="{% static 'Taxi1.jpg' %}" class="card-img-top" alt="taxi transparent" style="border-radius: 5%;">
+            <img src="{% static 'Taxi1.jpg' %}" class="card-img-top" alt="taxi transparent" style="border-radius: 5%; height:15rem">
           </a>
           <div class="card-body">
             <h5 class="card-title">Jak udělat taxi zkoušky co nejrychleji?</h5>
@@ -92,7 +92,21 @@
             <h5 class="card-title">Jak udělat taxi zkoušky co nejrychleji?</h5>
             <p class="card-text">Úspěšně složit taxi zkoušky je povinností každého uchazeče o taxi koncesi v Praze...</p>
             <div class="container" style="text-align: center">
-              <a href="{% url 'clanek1' %}" class="btn btn-warning" style="width: 10rem">Přečíst</a>
+              <a href="{% url 'clanek2' %}" class="btn btn-warning" style="width: 10rem">Přečíst</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="card" style="width:20rem; border-radius: 5%;">
+          <a href="{% url 'clanek3' %}">
+            <img src="{% static 'taxiblog3.jpg' %}" class="card-img-top" alt="Učení se na taxi zkoušky" style="border-radius: 5%;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Žádné taxi zkoušky? Novelá zákona může snížit profesionalitu řidičů taxi</h5>
+            <p class="card-text">Novela zákona možná zruší taxi zkoušky tak jak je známe...</p>
+            <div class="container" style="text-align: center">
+              <a href="{% url 'clanek3' %}" class="btn btn-warning" style="width: 10rem">Přečíst</a>
             </div>
           </div>
         </div>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="canonical" href="https://www.taxizkousky.cz/clanky/taxi-zkousky-novela-zakona/" />
+<title>2019 | Žádné taxi zkoušky? Novelá zákona může snížit profesionalitu řidičů taxi</title>
+<div class="container" style="max-width: 60rem">
+  <h1 style="text-align: center; margin-top:2rem">Žádné taxi zkoušky? Novelá zákona může snížit profesionalitu řidičů taxi</h1>
+  <br>
+  <br>
+  <p>Chystaná novela zákona o silniční dopravě, která mění rozsah pravidel provozu taxi, může snížit profesionalitu řidičů a tím kvalitu přepravy, míní sdružení českých taxikářů.</p>
+  <p>Dle novely již nebude potřeba mít taxametr, ale postačí mobilní aplikace a vozy se pouze vybaví evidenční nálepkou místo klasické střešní svítilny.</p>
+  <p>Co je však nejdůležitější - nový řidič nebude muset projít taxi zkouškami, respektive zkouškou z místopisu.</p>
+  <br>
+  <br>
+  <p style="text-align: center">Přečtěte si také náš návod jak taxi zkoušky udělat co nejrychleji <b><a href="{% url 'clanek1' %}">odkaz zde.</a></b></p>
+  <br>
+  <div class="container" style="text-align: center">
+    <a href="{% url 'signup' %}" class="btn btn-warning" style="width: 10rem">Registrovat se</a>
+  </div>
+  <br>
+  <br>
+  <p>Sdružení českých taxikářů dále upozorňuje na následnou rapidní deprofesionalizaci svého oboru a  fenomén známý ze stavebnictví, kde levná pracovní síla vytlačí ostatní více profesionální skupinu. </p>
+  <p>V dnešní době, kdy navigace jsou již víceméně v každém autě, jsou taxi zkoušky z místopisu relativně opravdu zbytečné.</p>
+  <br>
+  <p>Určitě je dobré znát oblíbené ulice a známé trasy po Praze, vypovídá to totiž o profesionálním přístupu oproti pouhému spoléhání se na navigaci ve voze.</p>
+  <p>Opravdu je však potřeba si toto vynucovat taxi zkouškou?</p>
+  <br>
+  <div class="image" style="text-align: center">
+    <img src="{% static 'blog3.jpg' %}" alt="brýle" style="width:25rem">
+  </div>
+  <br>
+  <p>Dle našeho názoru by se měli spíše přidat dodatečné zkoušky a to například praktické zkoušky z řidičských dovedností. Za zmínku také stojí test z první pomoci a z jednoho ze světových jazyků na pokročilejší úrovni. </p>
+  <p>Tyto dodatečné zkoušky pro taxi by vypovídali mnohem více o profesionalizaci oboru a o kvalitním přístupu ke klientům, jak českých tak i zahraničních.</p>
+  <br>
+  <p>Jen v Praze dle informací z magistrátu jezdí přibližně 9800 řidičů taxi, kteří prošli současnou podobou taxi zkoušky. Dalších přes 3000 řidičů jezdí pro aplikace alternativních přepravců (Uber, Bolt) u nichž jsou počty řidičů, kteří mají taxi zkoušky diskutabilní.</p>
+  <br>
+  <div class="container" style="text-align: center">
+    <a href="{% url 'clanky' %}" class="btn btn-primary" style="width: 10rem">Zpět</a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

@@ -322,6 +322,9 @@ def clanek1(request):
 def clanek2(request):
     return render(request, '3-rady-pro-uspesne-slozeni-taxi-zkousek.html')
 
+def clanek3(request):
+    return render(request, 'taxi-zkousky-novela-zakona.html')
+
 def profile(request):
     args = {'user':request.user}
     return render(request, 'profile.html', args)
